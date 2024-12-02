@@ -10,7 +10,63 @@
     ></script>
   </head>
   <body>
-    <h1>Add React to website</h1>
-    <script></script>
+    <div id="root"></div>
   </body>
+  <script
+    src="https://unpkg.com/react@17/umd/react.development.js"
+    crossorigin
+  ></script>
+  <script
+    src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    crossorigin
+  ></script>
+  <script>
+    /*
+    const h1DOM = document.createElement("h1");
+    h1DOM.title = "Hello";
+    h1DOM.className = "heading";
+    h1DOM.innerHTML = "Add React to website";
+    document.body.appendChild(h1DOM);
+    */
+
+    // React.createElement(type, props, children)
+    // children is also a prop
+    /*
+    const h1React = React.createElement(
+      "h1",
+      {
+      title: "Hello",
+      className: "heading",
+      },
+      "Hello Guys!"
+    );
+
+    console.dir(h1DOM);
+    console.log(h1React);
+    */
+    /*
+    const ulDOM = document.createElement("h1");
+    const liDOM = document.createElement("li");
+    liDOM.innerHTML = "Javascript";
+    document.body.appendChild(ulDOM);
+    ulDOM.appendChild(liDOM);
+    const liDOM1 = document.createElement("li");
+    liDOM1.innerHTML = "ReactJS";
+    ulDOM.appendChild(liDOM1);
+    */
+    const ulReact = React.createElement(
+      "ul",
+      {
+        id: "ul-id",
+        style: { color: "red", fontSize: "30px" },
+      },
+      React.createElement("li", { id: "li-1" }, "Javascript"),
+      React.createElement("li", null, "ReactJS")
+    );
+
+    //ReactDOM.render(ulReact, document.body);
+
+    const root = document.getElementById("root");
+    ReactDOM.render(ulReact, root);
+  </script>
 </html>
