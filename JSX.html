@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script type="text/babel">
+    // const ulReact = React.createElement(
+    //   "ul",
+    //   null,
+    //   React.createElement("li", null, "JavaScript"),
+    //   React.createElement("li", null, "ReactJS")
+    // );
+
+    // const ulReact = (
+    //   <ul>
+    //     <li>JavaScript</li>
+    //     <li>ReactJS</li>
+    //   </ul>
+    // );
+
+    // const container = document.getElementById("root");
+    // const root = ReactDOM.createRoot(container);
+    // root.render(ulReact);
+
+    // React@17
+    //const root = document.getElementById("root");
+    //ReactDOM.render(ulReact, root);
+
+    const course = [
+      {
+        name: "HTML, CSS",
+      },
+      {
+        name: "Responsive web design",
+      },
+      {
+        name: "ReactJS",
+      },
+    ];
+
+    const jsx = (
+      <ul>
+        <li>{course[0].name}</li>
+        <li>{course[1].name}</li>
+        <li>{course[2].name}</li>
+      </ul>
+    );
+    ReactDOM.render(jsx, document.getElementById("root"));
+  </script>
+</html>
